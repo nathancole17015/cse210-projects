@@ -21,8 +21,16 @@ class Program
         else if (grade >= 60 && grade < 70){
             Console.WriteLine("Your grade is a D");
         }
-        else if (grade < 90){
+        else {
             Console.WriteLine("Your grade is a F");
+        }
+
+        if(grade >= 70 ){
+            Console.WriteLine("You passed! Congratulations!");
+        }
+        else{
+            Console.WriteLine("You Failed");
+
         }
     }
 }
