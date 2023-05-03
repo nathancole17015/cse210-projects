@@ -7,7 +7,7 @@ public class Prompt{
         _prompts.Add("How was your day");
     }
     public string GetRandomPrompt(){
-        return "This is a prompt";
+        return "This is a a prompt";
 
     }
 }
