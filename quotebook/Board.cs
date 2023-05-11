@@ -24,6 +24,8 @@ public class Board{
         NicePrint(_quotes[randomNumber].GetQuote());
     }
 
+    
+    
     public void FindQuotesByAuthor(string author){
         foreach (Quote quote in _quotes){
             if(quote.HasAuthor(author)){

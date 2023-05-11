@@ -1,9 +1,10 @@
 using System;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Develop02 World!");
-    }
-}
+    // Prompt _prompt = new Prompt();
+
+    Journal _journal = new Journal();
+
+    Menu _menu = new Menu(_journal);
+    _menu.Display();
+    
+    
