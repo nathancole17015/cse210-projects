@@ -19,7 +19,7 @@ public class Prompt{
     
         var random = new Random();
         int randomNumber = random.Next(0,_prompts.Count);
-        Console.WriteLine(_prompts[randomNumber]);
+        Console.WriteLine($"{_prompts[randomNumber]}\n \n");
         
     
       }
