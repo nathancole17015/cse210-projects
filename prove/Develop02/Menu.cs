@@ -43,17 +43,17 @@ public class Menu{
 
                 break;
                 case "3":
-                    Console.Write("Name of file you want to load: ");
+                    Console.Write("Name of file you want to load(don't add .txt): ");
                     string SaveFilename = Console.ReadLine();
-                    _journal.CreateJournal(SaveFilename);
+                    _journal.CreateJournal($"{SaveFilename}.txt".ToLower());
                     
                     
                     
                 break;
                 case "4":
-                    Console.Write("Name of file you want to save: ");
+                    Console.Write("Name of file you want to save(don't add .txt): ");
                    string Filename = Console.ReadLine();
-                   _journal.SaveEntry(Filename);
+                   _journal.SaveEntry($"{Filename}.txt".ToLower());
 
 
                 break;
