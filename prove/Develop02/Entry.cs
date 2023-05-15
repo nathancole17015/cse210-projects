@@ -12,13 +12,6 @@ public class Entry{
 
     }
     
-   
-
-    
-    
-    
-    
-    
     public string GetEntry(){
         return $"{_dateAndTime}--Prompt:{_prompt}--> {_entry}";
     }
