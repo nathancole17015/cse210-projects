@@ -3,7 +3,9 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Learning03 World!");
-    }
+    {   
+        new Fractions(5,3);
+        new Fractions(3);
+        new Fractions();
+    }   
 }
