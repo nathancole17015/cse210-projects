@@ -23,12 +23,12 @@ public class Team{
     }
 
 public void AddWin(){
-    _wins += 1;
+    // _wins += 1;
 }
 public void AddLoss(){
     _loss += 1;
 }
-public string ReturnRecord(){
-    return $"{_wins}/{_loss}";
+// public string ReturnRecord(){
+    // return $"{_wins}/{_loss}";
 }
-}
+// }
