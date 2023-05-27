@@ -9,10 +9,6 @@ public class Scripture{
         _reference = reference;
         _words = WordsToList(words) ;
 
-
-
-
-
     }
     private List<Word> WordsToList(string word){
         string [] splitWord = word.Split(" ");
@@ -31,7 +27,6 @@ public class Scripture{
     int randomNumber = random.Next(_words.Count);
     string hiddenWordText = _words[randomNumber].GetWord();
     Word hiddenWord = new Word(hiddenWordText);
-    // hiddenWord.HideWord();
     Word WordHidden =  new Word("_____");
    
     if (hiddenWord !=  WordHidden){
@@ -40,16 +35,11 @@ public class Scripture{
     _words.Insert(randomNumber,WordHidden);
     }
     
-  
 }
-
     
-        
     }
     
         
-
-      
     
     public void Display(){
          string response = "";
@@ -68,17 +58,9 @@ public class Scripture{
         response = Console.ReadLine();
 
         }
-           
-           
-
-           
+              
         }
-     
-        
-
-        
-
-            
+         
     }
 
 
