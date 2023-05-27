@@ -1,14 +1,21 @@
 public class Word{
 
 private string _word = "";
-Boolean _shown = true;
+
+private Boolean _shown;
 
  public Word(string word){
     _word = word;
+    _shown =false;
+  
  }
 
-public void DisplayWord(){
-    Console.Write(_word);
+public string  GetWord(){
+    return _word;
+
 }
 
+public string HideWord(){
+    return "_";
+}
 }
