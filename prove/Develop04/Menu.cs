@@ -1,9 +1,9 @@
 public class Menu{
 
     
-    BreathingActivity breathingActivity = new BreathingActivity();
-    ReflectionActivity reflectionActivity = new ReflectionActivity();
-    ListingActivity listingActivity = new ListingActivity();
+   private BreathingActivity _breathingActivity = new BreathingActivity();
+   private ReflectionActivity _reflectionActivity = new ReflectionActivity();
+   private ListingActivity _listingActivity = new ListingActivity();
 
 
     public void Display(){
@@ -26,15 +26,15 @@ public class Menu{
                     Environment.Exit(0);
                     break;
                 case "1": 
-                    breathingActivity.Display();                  
+                    _breathingActivity.Display();                  
                  
                     break;
                 case "2":
-                    reflectionActivity.Display();
+                    _reflectionActivity.Display();
 
                 break;
                 case "3":
-                listingActivity.Display();
+                    _listingActivity.Display();
                    
                     
                     

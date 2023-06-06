@@ -1,6 +1,4 @@
-Menu asdf = new Menu();
+Menu _mindFullness = new Menu();
 
-asdf.Display();
+_mindFullness.Display();
 
-// BreathingActivity asdf = new BreathingActivity();
-// asdf.Display();
