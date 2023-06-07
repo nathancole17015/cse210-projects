@@ -5,13 +5,13 @@ public class Player{
 
     private int _jerseyNumber;
 
-    public Player(string name , int jersey){
-        _name =name;
-        _jerseyNumber = jersey;
+    // public Player(string name , int jersey, 0){
+    //     _name =name;
+    //     _jerseyNumber = jersey;
 
 
 
-    }
+    // }
       public Player(string name , int jersey, string position){
         _name =name;
         _jerseyNumber = jersey;
