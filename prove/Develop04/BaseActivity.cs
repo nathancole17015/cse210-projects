@@ -47,7 +47,7 @@ public void PauseCountdown(int length){
     
     for(int i = length; i > 0; i--){
          Console.Write(i);
-        Thread.Sleep(700);
+        Thread.Sleep(1000);
         Console.Write("\b \b");
 
     }
