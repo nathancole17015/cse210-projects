@@ -38,7 +38,7 @@ List <string> animationString = new List<string>();
 
         foreach (string s in animationString){
             Console.Write(s);
-            Thread.Sleep(1000);
+            Thread.Sleep(700);
             Console.Write("\b \b");
 
             }
@@ -47,7 +47,7 @@ public void PauseCountdown(int length){
     
     for(int i = length; i > 0; i--){
          Console.Write(i);
-        Thread.Sleep(1000);
+        Thread.Sleep(700);
         Console.Write("\b \b");
 
     }
