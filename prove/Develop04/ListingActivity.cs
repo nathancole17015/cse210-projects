@@ -38,6 +38,7 @@ public void Listing(){
         _inputs.Add(input);
     }
         int count =_inputs.Count;
+        Console.WriteLine();
         Console.WriteLine($"You listed {count} items!");
         _inputs.Clear();
     }

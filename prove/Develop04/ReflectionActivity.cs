@@ -36,7 +36,7 @@ public ReflectionActivity(){
         Console.WriteLine();
         Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
         Console.Write("You may being in: ");
-        PauseCountdown(5);
+        PauseCountdown(8);
 
 
 
