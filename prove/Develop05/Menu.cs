@@ -33,13 +33,13 @@ private int _totalPoints = 0;
                     break;
                 case "1": 
                     Console.WriteLine("The type of goals are: ");
-                    Console.WriteLine(" 1. Simple Goal");
+                    Console.WriteLine();
                     Console.WriteLine(" 2. Eternal Goal ");
                     Console.WriteLine(" 3. Checklist Goal");
                     Console.Write("Which type of goal would you like to create?  ");
                     string input = Console.ReadLine();
                     if (input == "1"){
-                         SimpleGoal _simaspleGoal = new SimpleGoal();
+                         SimpleGoal _simpleGoal = new SimpleGoal();
                         _simpleGoal.CreateNewGoal();
                         string Simple =_simpleGoal.ShowGoal();
                         _goals.Add(Simple);
@@ -69,7 +69,11 @@ private int _totalPoints = 0;
                     Console.WriteLine();
                     Console.WriteLine("Your Goals: ");
                  
-               
+                    for (int i = 0; i < _goals.Count; i++)
+                    {
+                        var goal = _goals[i];
+                    Console.WriteLine($"{i + 1}. {goal}");
+                            }
                 break;
                 case "3":
                     
