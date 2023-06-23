@@ -1,12 +1,16 @@
-public class Menu{
 
+public class Menu{
+List <string> _goals = new List<string>();
+
+List <Goals> _goal = new List<Goals>();
+Goals _aGoal = new Goals();
 private string _name;
 private string _description;
 private int _totalPoints = 0;
     
 
     public void Display(){
-
+        _goals.Clear();
         Console.Clear();
         string response = "";
         string[] options = {"1","2","3","4","5"};
@@ -16,11 +20,11 @@ private int _totalPoints = 0;
             response = "";
             while(options.Contains(response)==false)
             {
-                Console.Clear();
+                
                 Console.WriteLine($"You have {_totalPoints} points.");
                 Console.WriteLine();
                 Console.WriteLine("Menu Options:");
-                Console.Write("\n   1. Create New Goal\n    2. List Goals\n 3. Save Goals \n    4.Quit\n\n  Select choice from menu: ");
+                Console.Write("\n    1. Create New Goal\n    2. List Goals\n    3. Save Goals \n    4.Load Goals\n    5.Record Event\n    6.Quit\n\n  Select choice from menu: ");
                 response = Console.ReadLine() ?? String.Empty;
             
             switch(response){
@@ -35,21 +39,37 @@ private int _totalPoints = 0;
                     Console.Write("Which type of goal would you like to create?  ");
                     string input = Console.ReadLine();
                     if (input == "1"){
-                        
+                         SimpleGoal _simaspleGoal = new SimpleGoal();
+                        _simpleGoal.CreateNewGoal();
+                        string Simple =_simpleGoal.ShowGoal();
+                        _goals.Add(Simple);
+
                     }
                     else if(input == "2"){
+                        EternalGoals _eternalGoal = new EternalGoals();
+                        _eternalGoal.CreateNewGoal();
+                        string eternal = _eternalGoal.ShowGoal();
+                        _goals.Add(eternal);
+                        
 
                     }
                     else if (input == "3"){
-
+                        ChecklistGoal _checklistGoal = new ChecklistGoal();
+                        _checklistGoal.CreateNewGoal();
+                        string check = _checklistGoal.ShowGoal();
+                        _goals.Add(check);
+                        
+                        
                     }
                     else 
                     break;
 
                     break;
                 case "2":
-                    
-
+                    Console.WriteLine();
+                    Console.WriteLine("Your Goals: ");
+                 
+               
                 break;
                 case "3":
                     
@@ -68,7 +88,7 @@ private int _totalPoints = 0;
                  case "5":
                     
                     
-                   
+                 
                     
                     
                 break;

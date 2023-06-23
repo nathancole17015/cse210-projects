@@ -1,24 +1,34 @@
-public class ChecklistGoal:Base{
+public class ChecklistGoal:Goals{
 private string _type  = "CheckList";
 private string _name;
-private string _description;
-private int _points;
 private int _bonusPoints;
 private int _times;
-private int _completed = 0;
-public ChecklistGoal(string name, string description, int points, int times,int bonusPoints){
-            _name = name;
-            _description = description;
-            _points = points;
-            _bonusPoints = bonusPoints;
+private int _completed ;
+private string _description;
+public ChecklistGoal(){
 
 }
+
+
     public override void CreateNewGoal()
     {
         base.CreateNewGoal();
-        Console.WriteLine("How many times does this goal need to be accomplished for a bonus? ");
+        Console.Write("How many times does this goal need to be accomplished for a bonus? ");
+        int _times = Int32.Parse(Console.ReadLine());
+        SetTimes(_times);
+        Console.Write("What is the bonus for accomplishing it that many times? ");
+         int _bonusPoints = Int32.Parse(Console.ReadLine());
+         SetBonusPoints(_bonusPoints);
     }
     public override string GetGoal(){
-    return $"{_type},{_name} -- Currently completed: {_completed}/{_times}";
+    return $"[ ] {_name} ({_description}) -- Currently completed: {_completed}/{_times}";
 }
+    public void SetTimes(int times){
+        _times = times;
+    }
+     public void SetBonusPoints(int bonusPoints){
+        _bonusPoints = bonusPoints;
+    }
+   
+
 }
