@@ -1,4 +1,5 @@
 public class Base{
+private string _type;
 private string _name;
 private string _description;
 private int _points;
@@ -25,7 +26,7 @@ public void RecordEvents(){
 }
 public virtual string GetGoal(){
 
-    return $"{_type},{_name},{_description},{_points}";
+    return $"[] {_name},({_description})";
 }
 };
 
