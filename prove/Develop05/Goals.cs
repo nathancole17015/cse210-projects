@@ -12,28 +12,28 @@ public virtual void CreateNewGoal(){
     SetNotDone();
     Console.Write("What is the name of your goal? ");
     string _name = Console.ReadLine();
-    setName(_name);
+    SetName(_name);
     Console.Write("What is a short description? ");
     string _description = Console.ReadLine();
-    setDescription(_description);
+    SetDescription(_description);
     Console.Write("What is the amount of points associated with this goal? ");
     int _points = int.Parse(Console.ReadLine());
-    setPoints(_points);
+    SetPoints(_points);
 
 }
-public void setName(string name){
+public void SetName(string name){
     _name = name ;
 }
-public void setDescription(string description){
+public void SetDescription(string description){
     _description = description;
 }
-public void setPoints(int points){
+public void SetPoints(int points){
     _points = points;
 }
 public string ShowType(){
     return _type;
 }
-public void setTotalPoints(int totalPoints){
+public void SetTotalPoints(int totalPoints){
     _totalPoints = totalPoints;
 }
 public int ShowTotalPoints(){
@@ -99,7 +99,7 @@ public virtual void IsComplete(Goals goal){
     
   int EarnedPoints = goal.GetPoints();
     _totalPoints += EarnedPoints;
-    setTotalPoints(_totalPoints);
+    SetTotalPoints(_totalPoints);
     
     goal.SetDone();
     
