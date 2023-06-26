@@ -1,38 +1,69 @@
 using System.IO; 
 public class GoalManagement{
+
  
- 
-public void SaveGoals(Goals goal){
+public void SaveGoals(string filename, List<Goals> _goals){
 
 
 
 
-string filename = Console.ReadLine();
-
-using (StreamWriter outputFile = new StreamWriter(filename))
-{
-    // You can add text to the file with the WriteLine method
-    string hi = goal.GetGoal();
-    outputFile.WriteLine(hi);
+    using (StreamWriter outputFile = new StreamWriter(filename))
+    {
+    // You can add text to the file with the WriteLin(e method
     
-    // You can use the $ and include variables just like with Console.WriteLine
-    string color = "Blue";
-    outputFile.WriteLine($"My favorite color is {color}");
-}
-}
-public void  LoadGoals(){
-Console.Write("Enter file name");
-string filename = Console.ReadLine();
-string[] lines = System.IO.File.ReadAllLines(filename);
+            foreach (Goals goal in _goals){
+            outputFile.WriteLine($"{goal.GetGoal()}");  
+        }
 
-foreach (string line in lines)
-{
-    string[] parts = line.Split(",");
-
-    string name = parts[1];
-    string description = parts[2];
-    int points = Int32.Parse(parts[3]);
+        }
 }
-} 
+
+public void LoadGoals(string filename, List<Goals> _goals){
+          if (filename == ""){
+            foreach (Goals goal in _goals){
+            Console.WriteLine($"{goal.GetGoal()}\n");
+        }
+          }
+        else{
+        string[] lines = System.IO.File.ReadAllLines(filename);
+        
+        foreach (string line in lines){   
+        
+
+          string[] parts = line.Split(',');
+            if(parts[0] == "SimpleGoal"){
+                SimpleGoal simpleGoal = new SimpleGoal();
+                simpleGoal.SetNotDone();
+                simpleGoal.setName(parts[1]);
+                simpleGoal.setDescription(parts[2]);
+                simpleGoal.setPoints(int.Parse(parts[3]));
+                _goals.Add(simpleGoal);
+
+            }
+             if(parts[0] == "EternalGoal"){
+                EternalGoals eternalGoal = new EternalGoals();
+                eternalGoal.SetNotDone();
+                  eternalGoal.setName(parts[1]);
+                eternalGoal.setDescription(parts[2]);
+                eternalGoal.setPoints(int.Parse(parts[3]));
+                _goals.Add(eternalGoal);
+            }
+             if(parts[0] == "ChecklistGoal"){
+                ChecklistGoal checkListGoal = new ChecklistGoal();
+                checkListGoal.SetNotDone();
+                checkListGoal.setName(parts[1]);
+                checkListGoal.setDescription(parts[2]);
+                checkListGoal.setPoints(int.Parse(parts[3]));
+                checkListGoal.SetBonusPoints(int.Parse(parts[6]));
+                checkListGoal.SetTimes(int.Parse(parts[5]));
+                _goals.Add(checkListGoal);
+
+
+            }
+            
+            
+            }
+        }
+    }
 
 }
