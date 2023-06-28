@@ -52,18 +52,9 @@ public ChecklistGoal(){
         return $"{_type},{base.GetGoal()},{_bonusPoints},{_times},{_completed}";
     }
 
-    public override void RecordEvents(List<Goals> _goals){
-    Console.WriteLine(" Your goals: ");
-    for (int i = 0; i < _goals.Count; i++)
-{
-        var goal = _goals[i];
-        Console.WriteLine($"    {i + 1}. {goal.GetName()}");
-
-         
-     
-        }
-         Console.Write("Choose goal to record: ");
-        int input = int.Parse(Console.ReadLine());
+    public override void RecordEvents(List<Goals> _goals,int input){
+    
+        
        for (int i = 0; i < _goals.Count; i++){
        
                 var goal = _goals[i];

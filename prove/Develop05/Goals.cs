@@ -46,8 +46,8 @@ public int GetPoints(){
 public string GetName(){
     return _name;
 }
-public virtual void RecordEvents(List<Goals> _goals){
-    Console.WriteLine(" Your goals: ");
+  public void DisplayNames(List<Goals> _goals){
+            Console.WriteLine(" Your goals: ");
     for (int i = 0; i < _goals.Count; i++)
 {
         var goal = _goals[i];
@@ -56,8 +56,10 @@ public virtual void RecordEvents(List<Goals> _goals){
          
      
         }
-         Console.Write("Choose goal to record: ");
-        int input = int.Parse(Console.ReadLine());
+    }
+public virtual void RecordEvents(List<Goals> _goals, int input){
+
+         
        for (int i = 0; i < _goals.Count; i++){
        
                 var goal = _goals[i];
@@ -101,7 +103,7 @@ public virtual void IsComplete(Goals goal){
     _totalPoints += EarnedPoints;
     SetTotalPoints(_totalPoints);
     
-    goal.SetDone();
+    
     
 
 }

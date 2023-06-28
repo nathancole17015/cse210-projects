@@ -93,8 +93,10 @@ private int _totalPoints = 0;
                     
                 break;
                  case "5":
-                    
-                    _goal.RecordEvents(_goals);
+                    _goal.DisplayNames(_goals);
+                    Console.Write("Choose goal to record: ");
+                    int _input = int.Parse(Console.ReadLine());
+                    _goal.RecordEvents(_goals,_input);
                  
                     
                     
