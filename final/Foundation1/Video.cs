@@ -11,9 +11,10 @@ public Video(string title, string author, int length, List<Comments> comments){
 public void Display(){
 Console.WriteLine();
 Console.WriteLine("===================================");
-Console.WriteLine($"Title: {_title}\nDescription: {_author}\nLength: {_length}, Number of Comments: {_comments.Count()} ");
+Console.WriteLine($"Title: {_title}\nAuthor: {_author}\nLength: {_length}, Number of Comments: {_comments.Count()} ");
 Console.WriteLine();
 Console.WriteLine("Comments: ");
+Console.WriteLine();
 GetComments();
 Console.WriteLine("===================================");
 Console.WriteLine();
@@ -21,6 +22,7 @@ Console.WriteLine();
 public void GetComments(){
     foreach (Comments line in _comments){
         Console.WriteLine(line.StringifyComment());
+        Console.WriteLine();
     }
 }
 public void AddComment(Comments comment){
