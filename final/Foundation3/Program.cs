@@ -7,6 +7,7 @@ Lectures _lectures = new Lectures("Lecture","The Power of Positive Thinking: Unl
     Address _ReceptionAdd = new Address("123 Desert Lane", "Phoenix", "AZ","USA",85001);
 Receptions _reception = new Receptions("Reception","Harmony and Celebration: An Evening of Cultural Fusion", " Immerse yourself in a captivating blend of diverse cultures through music, dance, and cuisine, \nas we come together to celebrate unity and the beauty of cultural diversity at this enchanting reception.", "November 10, 2023","7:00 PM","culturalfusionreception@gmail.com", _ReceptionAdd);
 
+
 Console.WriteLine();
 _reception.DisplayReception();
 Console.WriteLine();
