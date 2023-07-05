@@ -9,7 +9,8 @@ public class Receptions:Events{
             _email =email;
     }
 
-    public void DisplayReception(){
+    public void FullDetails(){
+        Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"RSVP Email: {_email}");
         

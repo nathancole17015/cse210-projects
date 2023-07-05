@@ -9,8 +9,23 @@ Receptions _reception = new Receptions("Reception","Harmony and Celebration: An 
 
 
 Console.WriteLine();
-_reception.DisplayReception();
+Console.WriteLine("Standard Details");
+_reception.StandardInformation();
 Console.WriteLine();
-_lectures.DisplayLecture();
+_reception.FullDetails();
 Console.WriteLine();
-_outdoorGathering.DisplayOutdoorGathering();
+_reception.ShortDescription();
+Console.WriteLine();
+Console.WriteLine("Standard Details");
+_lectures.StandardInformation();
+Console.WriteLine();
+_lectures.FullDetails();
+Console.WriteLine();
+_lectures.ShortDescription();
+Console.WriteLine();
+Console.WriteLine("Standard Details");
+_outdoorGathering.StandardInformation();
+Console.WriteLine();
+_outdoorGathering.FullDetails();
+Console.WriteLine();
+_outdoorGathering.ShortDescription();

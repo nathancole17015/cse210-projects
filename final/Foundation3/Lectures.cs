@@ -10,8 +10,8 @@ public class Lectures:Events{
             _speakerName = speakerName;
             _capacity = capacity;
     }
-    public void DisplayLecture(){
-       
+    public void FullDetails(){
+       Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"Speaker: {_speakerName}");
         Console.WriteLine($"Capacity: {_capacity}");

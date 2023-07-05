@@ -25,5 +25,12 @@ public class Events{
     Console.WriteLine($"Time: {_time}");
     Console.WriteLine($"Address: {_address.GetAddress()}");
     }
+
+    public void ShortDescription(){
+        Console.WriteLine("Short description");
+        Console.WriteLine($"Type: {_type}");
+        Console.WriteLine($"Title: {_title}" );
+        Console.WriteLine($"Date: {_date}");
+    }
 }
 
