@@ -8,9 +8,20 @@ public class OutdoorGatherings:Events{
           
             _weather = weather;
     }
-    public void FullDetails(){
+    public void Display(){
+        Console.WriteLine();
+        Console.WriteLine("======================================");
+        Console.WriteLine();
+        Console.WriteLine("Standard Details");
+        StandardInformation();
         Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"Weather: {_weather}");
+        Console.WriteLine();
+        Console.WriteLine("Short Description");
+        ShortDescription();
+        Console.WriteLine();
+        Console.WriteLine("======================================");
+       
     }
 }

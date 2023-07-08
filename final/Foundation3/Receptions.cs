@@ -9,10 +9,21 @@ public class Receptions:Events{
             _email =email;
     }
 
-    public void FullDetails(){
+    public void Display(){
+        Console.WriteLine();
+        Console.WriteLine("======================================");
+        Console.WriteLine();
+        Console.WriteLine("Standard Details");
+        StandardInformation();
         Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"RSVP Email: {_email}");
+        Console.WriteLine();
+        Console.WriteLine("Short Description");
+        ShortDescription();
+        Console.WriteLine();
+        Console.WriteLine("======================================");
+                
         
     }
 }
