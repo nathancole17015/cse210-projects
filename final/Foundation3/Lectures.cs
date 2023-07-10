@@ -16,6 +16,7 @@ public class Lectures:Events{
         Console.WriteLine();
         Console.WriteLine("Standard Details");
         StandardInformation();
+        Console.WriteLine();
         Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"Speaker: {_speakerName}");

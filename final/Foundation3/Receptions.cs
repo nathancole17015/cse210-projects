@@ -15,6 +15,7 @@ public class Receptions:Events{
         Console.WriteLine();
         Console.WriteLine("Standard Details");
         StandardInformation();
+        Console.WriteLine();
         Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"RSVP Email: {_email}");

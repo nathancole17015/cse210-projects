@@ -14,6 +14,7 @@ public class OutdoorGatherings:Events{
         Console.WriteLine();
         Console.WriteLine("Standard Details");
         StandardInformation();
+        Console.WriteLine();
         Console.WriteLine("Full Details");
         StandardInformation();
         Console.WriteLine($"Weather: {_weather}");
